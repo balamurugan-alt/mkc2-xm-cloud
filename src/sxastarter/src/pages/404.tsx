@@ -11,7 +11,7 @@ import Layout from 'src/Layout';
 import { GetStaticProps } from 'next';
 import { siteResolver } from 'lib/site-resolver';
 
-const Custom404 = (props: SitecorePageProps): JSX.Element => {
+function Custom404(props: SitecorePageProps): JSX.Element {
   if (!(props && props.layoutData)) {
     return <NotFound />;
   }
@@ -24,7 +24,7 @@ const Custom404 = (props: SitecorePageProps): JSX.Element => {
       <Layout layoutData={props.layoutData} headLinks={props.headLinks} />
     </SitecoreContext>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const site = siteResolver.getByName(config.jssAppName);
