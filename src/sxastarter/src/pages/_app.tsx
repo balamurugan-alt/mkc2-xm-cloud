@@ -9,8 +9,6 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
 
   return (
     <>
-      <h1>MKC - XM Cloud</h1>
-      <p>Starter Kit</p>
       <I18nProvider lngDict={dictionary} locale={pageProps.locale}>
         <Component {...rest} />
       </I18nProvider>
