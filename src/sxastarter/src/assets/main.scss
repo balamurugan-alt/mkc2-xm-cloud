@@ -3,7 +3,8 @@
 @import "bootstrap/scss/bootstrap";
 @import "sass/main.scss";
 @import "basic/main.scss";
-
+@import './basic/variables';
+@import "sass/abstracts/mixins";
 footer {
   background-color: #ededed !important;
   background-image: none;
