@@ -1,10 +1,30 @@
 import React from 'react';
-import Image from 'next/image';
+import { ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ComponentProps } from 'lib/component-props';
+import Image from 'src/core/atoms/Image';
 import Head from 'next/head';
 
-const bannerImg =
-  'https://www.mccormick.com/-/media/project/oneweb/mccormick-us/frenchs/recipes/g/frenchs-green-bean-casserole-recipe.jpg?rev=9a25ddc01f14451cb27ba8fd5117d778&vd=20211118T124414Z&extension=webp&hash=12CABD4BD0BD4FEEDE462BAA5B50A59E';
-const RecipeBanner = (): JSX.Element => {
+// var  backgroundPosition: "center",
+// var  backgroundRepeat: "no-repeat",
+// var  backgroundSize: "cover",
+// var  position: "relative"
+
+type RecipeBannerProps = ComponentProps & {
+  fields: {
+    Mobile_Image: ImageField;
+
+    Desktop_Image?: {
+      value: {
+        src: string;
+        alt: string;
+        width: number;
+        height: number;
+      };
+    };
+  };
+};
+
+const RecipeBanner = (props: RecipeBannerProps): JSX.Element => {
   return (
     <>
       <Head>
@@ -28,7 +48,7 @@ const RecipeBanner = (): JSX.Element => {
             <div className="row">
               <div className="col-12 p-0">
                 <div className="fullBanner">
-                  <Image src={bannerImg} alt="bannerImage" priority={true} />
+                  <Image field={props.fields.Desktop_Image} priority={true} />
                 </div>
               </div>
             </div>
