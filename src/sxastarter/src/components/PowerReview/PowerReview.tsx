@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 interface PowerReviewsDisplay {
   display: {
@@ -49,9 +50,15 @@ const PowerReviews = () => {
 
   return (
     <>
+      <Helmet>
+        <script
+          type="text/javascript"
+          src="https://ui.powerreviews.com/stable/4.1/ui.js"
+          async
+        ></script>
+      </Helmet>
       <h1>Power Review</h1>
       <div id="pr-write" className="m-2"></div>
-      <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js" async></script>
     </>
   );
 };
