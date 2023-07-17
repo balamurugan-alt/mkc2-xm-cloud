@@ -14,12 +14,6 @@ class MyDocument extends Document {
             defer
             src="https://cdn-prod.securiti.ai/consent/auto_blocking/83bbef3c-9911-47cd-b325-8725673c2ab8/cfbaed94-437e-437f-b36c-4d67cd5254b1.js"
           ></script>
-          <script
-            type="text/javascript"
-            src="//ui.powerreviews.com/stable/4.1/ui.js"
-            async
-            data-cookiecategory="16"
-          ></script>
         </Head>
         <body>
           <Main />
