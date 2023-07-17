@@ -17,10 +17,6 @@ interface PowerReviewsDisplay {
 }
 
 const PowerReviews = () => {
-  const script = document.createElement('script');
-  script.src = 'https://ui.powerreviews.com/stable/4.1/ui.js';
-  document.body.appendChild(script);
-
   const renderPowerReviews = () => {
     let prStyleSheetOverride = $('#franks20-pr-overrides').attr('href');
     if (
@@ -48,6 +44,9 @@ const PowerReviews = () => {
   };
 
   useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://ui.powerreviews.com/stable/4.1/ui.js';
+    document.body.appendChild(script);
     renderPowerReviews();
   }, []);
 
