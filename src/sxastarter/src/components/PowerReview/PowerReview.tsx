@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 
 interface PowerReviewsDisplay {
   display: {
