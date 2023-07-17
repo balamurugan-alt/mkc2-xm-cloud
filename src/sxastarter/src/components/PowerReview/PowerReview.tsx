@@ -18,6 +18,10 @@ interface PowerReviewsDisplay {
 }
 
 const PowerReviews = () => {
+  const script = document.createElement('script');
+  script.src = 'https://ui.powerreviews.com/stable/4.1/ui.js';
+  document.body.appendChild(script);
+
   const renderPowerReviews = () => {
     let prStyleSheetOverride = $('#franks20-pr-overrides').attr('href');
     if (
@@ -50,13 +54,6 @@ const PowerReviews = () => {
 
   return (
     <>
-      <Helmet>
-        <script
-          type="text/javascript"
-          src="https://ui.powerreviews.com/stable/4.1/ui.js"
-          async
-        ></script>
-      </Helmet>
       <h1>Power Review</h1>
       <div id="pr-write" className="m-2"></div>
     </>
