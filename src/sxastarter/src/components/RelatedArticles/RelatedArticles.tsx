@@ -1,24 +1,11 @@
-import { Field, ImageField, LinkField, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { ComponentProps } from 'lib/component-props';
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from './RelatedArticles.module.scss';
 import Image from 'src/core/atoms/Image';
-
-type RelatedArticlesProps = ComponentProps & {
-  fields: {
-    items: {
-      fields: {
-        Title: Field<string>;
-        Details: Field<string>;
-        Link: LinkField;
-        Image: ImageField;
-      };
-    }[];
-  };
-};
+import { RelatedArticlesProps } from './RelatedArticlesType.ts';
 
 const RelatedArticles = (props: RelatedArticlesProps): JSX.Element => {
   const [startIndex, setStartIndex] = useState(0);

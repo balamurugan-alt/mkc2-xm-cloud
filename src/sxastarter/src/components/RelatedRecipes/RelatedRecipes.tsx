@@ -1,26 +1,11 @@
-import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { ComponentProps } from 'lib/component-props';
 import Link from 'next/link';
 import styles from './RelatedRecipes.module.scss';
 import Image from 'src/core/atoms/Image';
-
-type RelatedRecipesProps = ComponentProps & {
-  fields: {
-    items: {
-      fields: {
-        Title: Field<string>;
-        Link: LinkField;
-        Image: ImageField;
-      };
-    }[];
-  };
-};
+import { RelatedRecipesProps } from './RelatedRecipesType.ts';
 
 const RelatedRecipes = (props: RelatedRecipesProps): JSX.Element => {
-  // console.log(props.fields.items[0].fields.Title.value);
-
   return (
     <div className="">
       <div className="row">
